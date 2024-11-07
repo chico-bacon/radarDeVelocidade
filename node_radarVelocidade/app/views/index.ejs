@@ -1,0 +1,22 @@
+<form action="/velocidade" method="post">
+    <fieldset>
+        <legend>Dados Coletados</legend>
+<%
+for (let i = 0; i < 10; i++) {
+    if (i == 5) {
+        continue;
+    }
+_%>
+        <label for="placa">Placa: </label>
+        <input type="text" id="placa" name="placa" placeholder="insira a placa" >
+        <label for="hora">Data: </label>
+        <input type="datetime-local" id="hora" name="horario">
+        <label for="velocidade">Velocidade: </label>
+        <input type="number" id="velocidade" name="velocidade">
+        <label for="velocidade">Km/h</label>
+<%
+}
+_%>
+    <button>Enviar</button>
+    </fieldset>
+</form>
